@@ -27,3 +27,53 @@ object plancha {
 	method esComida() { return false }
 	method esElectrodomestico() { return true }	
 }
+
+object kiloDeMilanesasRebozadas {
+	var sale = 260
+	
+	method precio(valor) { sale = valor }
+	method precio() { return sale }
+	method esComida() { return true }
+	method esElectrodomestico() { return false }	
+}
+
+object BotellaDeSalsaDeTomates {
+	var sale = 90
+	
+	method precio(valor) { sale = valor }
+	method precio() { return sale }
+	method esComida() { return true }
+	method esElectrodomestico() { return false }
+}
+
+object microondas {
+	
+	method precio() { return 4200 }
+	method esComida() { return false }
+	method esElectrodomestico() { return true }	
+}
+
+object cebollas {
+	
+	method precio() { return 25 }
+	method esComida() { return true }
+	method esElectrodomestico() { return false }	
+
+object packComida {
+	var plato
+	var aderezo
+	
+	method precio() {
+		return plato.precio() + aderezo.precio()
+		}
+	method esComida() { return true }
+	method esElectrodomestico() { return false }
+}
+
+object packRegalo {
+	var componentes	
+	
+	method precio() { return componentes.sum ({ cosa => cosa.precio()}) *0.8 }
+	method esComida() {return componentes.all ({ cosa => cosa.esComida() }) } 
+	method esElectrodomestico() {return componentes.any ({ cosa => cosa.esElectrodomestico()}) }	
+}

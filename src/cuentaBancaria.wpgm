@@ -1,0 +1,30 @@
+object cuentaCorriente {
+	
+	method depositar(importe) { }
+	method extraer(importe) {}
+	method saldo() {}	
+	
+}
+
+object cuentaConGastos { 
+
+	method depositar(importe) { }
+	method extraer(importe) {}
+	method saldo() {}	
+}
+
+object combinada {
+	var property cuentaPrimaria
+	var property cuentasecundaria
+	
+	method depositar(importe) { }
+	method extraer(importe) {}
+	method saldo() { return cuentaPrimaria.Saldo() }	
+	
+}
+
+
+
+
+
+
