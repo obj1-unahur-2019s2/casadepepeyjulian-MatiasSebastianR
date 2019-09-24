@@ -58,6 +58,8 @@ object cebollas {
 	method precio() { return 25 }
 	method esComida() { return true }
 	method esElectrodomestico() { return false }	
+	
+	}
 
 object packComida {
 	var plato

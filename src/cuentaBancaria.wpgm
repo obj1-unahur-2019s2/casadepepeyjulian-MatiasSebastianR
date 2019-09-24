@@ -15,11 +15,11 @@ object cuentaConGastos {
 
 object combinada {
 	var property cuentaPrimaria
-	var property cuentasecundaria
+	var property cuentaSecundaria
 	
 	method depositar(importe) { }
 	method extraer(importe) {}
-	method saldo() { return cuentaPrimaria.Saldo() }	
+	method saldo() { return cuentaPrimaria.Saldo() + cuentaSecundaria.Saldo() }	
 	
 }
 
